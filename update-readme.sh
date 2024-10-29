@@ -7,7 +7,7 @@ cd /opt/checker-daily || exit
 date=$(date +"%Y-%m-%d")
 
 # Append the date to README.md
-echo "$date" >> README.md
+echo -e "\n$date" >> README.md
 
 # Git commands to add, commit, and push the changes
 git add README.md

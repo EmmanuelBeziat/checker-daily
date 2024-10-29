@@ -5,8 +5,8 @@ cd /d "I:\checker-daily"
 :: Get the current date
 for /f "tokens=1-3 delims=/ " %%a in ("%date%") do set date=%%c-%%b-%%a
 
-:: Append the date to README.md
-echo %date% >> README.md
+:: Append a new line followed by the date to README.md
+(echo. & echo %date%) >> README.md
 
 :: Git commands to add, commit, and push the changes
 git add README.md
