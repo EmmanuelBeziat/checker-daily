@@ -9,6 +9,8 @@ for /f "tokens=1-3 delims=/ " %%a in ("%date%") do set date=%%c-%%b-%%a
 (echo * %date%) >> README.md
 
 :: Git commands to add, commit, and push the changes
+git fetch
+git pull
 git add README.md
 git commit -m "Daily update: %date%"
 git push origin main

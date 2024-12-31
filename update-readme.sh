@@ -10,6 +10,8 @@ date=$(date +"%Y-%m-%d")
 echo -e "\n$date" >> README.md
 
 # Git commands to add, commit, and push the changes
+git fetch
+git pull
 git add README.md
 git commit -m "Daily update: $date"
 git push origin main
